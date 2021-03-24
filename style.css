@@ -1,0 +1,10 @@
+/* classi generiche */
+.d-flex{
+    display: flex;
+}
+.d-inblock{
+    display: inline-block;
+}
+.d-inline{
+    display:inline;
+}
