@@ -38,42 +38,56 @@
     background-color: #282828;
     height: 60px;   
 }
+aside{
+    background-color: #000000;
+    flex-direction: column;
+    flex-basis: 200px; 
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+.front{
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+@media all and (max-width: 767px){
+    aside{
+       flex-basis: 60px;
+    }
+}
 main{
     background-color: #141922;
     height: calc(100vh - 60px);
+    align-items: stretch;
 }
 nav{
     width: 100%;
+    font-size: 11px;
 }
 .top-nav{
     background-color: #080B12;
-    height: 60px;
+    height: 30px;
+    padding: 15px 20px 15px 0;
+}
+span.btn-alike{
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 5px 30px;
+    line-height: 20px;
+    vertical-align: middle;
 }
 .nav-ul{
     list-style-type: none;
+}
+.nav-ul li{
+    margin-left: 10px;
+    margin-right: 10px;
 }
 a{
     text-decoration: none;
 }
 .down-nav{
     height: 40px;
-}
-aside{
-    background-color: #000000;
-    flex-direction: column;
-    width: 200px;
-    height: 100%;   
-}
-.front{
-    width: calc(100vw - 200px);
-}
-
-@media all and (max-width: 767px){
-
-    aside{
-        width: 60px;
-    }
-    .front{
-        width: calc(100vw - 60px);
-    }
+    line-height: 40px;
+    vertical-align: middle;
 }
