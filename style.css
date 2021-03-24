@@ -8,3 +8,16 @@
 .d-inline{
     display:inline;
 }
+
+body{
+    margin:0;
+}
+
+.toolbar{
+    background-color: #282828;
+    height: 60px;   
+}
+main{
+    background-color: #141922;
+    height: calc(100vh - 60px);
+}
