@@ -37,6 +37,13 @@
 .t-10px{
     padding-top: 10px;
 }
+
+main a,
+main ul{
+    text-decoration: none;
+}
+
+/* layout */
 footer{
     background-color: #282828;
     min-height: 60px;
@@ -48,7 +55,6 @@ main{
     height: calc(100vh - 60px);
     align-items: stretch;
 }
-
 aside{
     flex-basis: 200px;
     flex-grow: 0;
@@ -87,34 +93,69 @@ aside{
     display: none;
 }
 @media all and (max-width: 767px){
-    .logo-box{
-        flex-basis: 30px;
-    }
-    .lg-logo{
-        display: none;
-    }
+
     .xs-logo{
         display: block;
-        height: 35px;  
+        height: 22px;  
+    }
+    .xs-hidden{
+        display: none;
     }
 }
 .t-playlists,
 .aside-nav,
 .account{
     flex-grow: 0;
-    flex-basis: 30px;
-    flex-shrink:0;
+    flex-basis: auto;
+    flex-shrink: 0;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 .b-playlists{
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;
-    overflow: scroll;
-    }
+    overflow: auto;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+.nav-icon{
+    width: 22px;
+    vertical-align: top;
+    margin-right: 10px;
+}
+aside ul li {
+    margin-bottom: 10px;
+}
+aside ul li a {
+    color: #84858A;
+}
+aside ul li a:hover{
+    color: white;
+    text-decoration: none;
+}
 
-
-
-
+.download-icon{
+    width:15px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.profile-box{
+    border-top: 1px solid #84858A;
+    padding-top: 15px;
+}
+.profile-icon{
+    width: 20px;
+}
+.bg-circle{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color:  #84858A;
+    vertical-align: middle;
+}
 
 
 
