@@ -34,60 +34,87 @@
 .t-uppercase{
     text-transform: uppercase
 }
-.toolbar{
+.t-10px{
+    padding-top: 10px;
+}
+footer{
     background-color: #282828;
-    height: 60px;   
-}
-aside{
-    background-color: #000000;
-    flex-direction: column;
-    flex-basis: 200px; 
-    flex-shrink: 0;
-    flex-grow: 0;
-}
-.front{
-    flex-shrink: 1;
-    flex-grow: 1;
-}
-
-@media all and (max-width: 767px){
-    aside{
-       flex-basis: 60px;
-    }
+    min-height: 60px;
+    width: 100vw;
+    z-index: 1;
 }
 main{
     background-color: #141922;
     height: calc(100vh - 60px);
     align-items: stretch;
 }
-nav{
-    width: 100%;
-    font-size: 11px;
+
+aside{
+    flex-basis: 200px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: black;
+    flex-direction: column;
+    align-items: stretch;
 }
-.top-nav{
-    background-color: #080B12;
-    height: 30px;
-    padding: 15px 20px 15px 0;
+.content-screen{
+    flex-basis: calc( 100vw - 200px);
+    flex-grow: 1;
+    flex-shrink: 1;
+    }
+@media all and (max-width: 767px){
+    aside{
+        flex-basis: 80px;
+    }
+    .content-screen{
+        flex-basis: calc( 100vw - 80px);
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
 }
-span.btn-alike{
-    border: 1px solid white;
-    border-radius: 30px;
-    padding: 5px 30px;
-    line-height: 20px;
-    vertical-align: middle;
+.logo-box{
+    flex-grow: 0;
+    flex-basis: 1;
+    flex-shrink: 0;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
 }
-.nav-ul{
-    list-style-type: none;
+.lg-logo{
+    height: 35px;        
 }
-.nav-ul li{
-    margin-left: 10px;
-    margin-right: 10px;
+.xs-logo{
+    display: none;
 }
-a{
-    text-decoration: none;
+@media all and (max-width: 767px){
+    .logo-box{
+        flex-basis: 30px;
+    }
+    .lg-logo{
+        display: none;
+    }
+    .xs-logo{
+        display: block;
+        height: 35px;  
+    }
 }
-.down-nav{
-    height: 40px;
-    line-height: 40px;
-    vertical-align: middle;
+.t-playlists,
+.aside-nav,
+.account{
+    flex-grow: 0;
+    flex-basis: 30px;
+    flex-shrink:0;
 }
+.b-playlists{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    overflow: scroll;
+    }
+
+
+
+
+
+
+
