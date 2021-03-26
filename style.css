@@ -37,6 +37,9 @@
 .t-uppercase{
     text-transform: uppercase
 }
+.font-xs{
+    font-size: 11px;
+}
 .t-10px{
     padding-top: 10px;
 }
@@ -190,20 +193,26 @@ nav a {
     margin-right: 5px;
     margin-left: 5px;
 }
+span.under-line{
+    height: 2px;
+    width: 20px;
+    border-bottom: 2px solid #ADFF2F;
+    position: absolute;
+}
 
 /* central-wrap contentente 3 sezioni*/
 @media all and (max-width: 991px){
-    .chronology-box{
+    .section-box{
         flex-wrap: wrap;
     }
     .cover-box{
-        width: 80px;
+        width: 100px;
     }
     .info-track{
-        width: 80px;
+        width: 100px;
     }
 }
-.chronology-box{
+.section-box{
     overflow-x: hidden;
 }
 
@@ -213,22 +222,34 @@ nav a {
     flex-basis: 1;
 }
 
-.cover-box{
+.cover-box,
+.info-track{
     max-width: 200px;
-    padding: 10px;
-    min-width: 80px;
+    min-width: 100px;
+    padding: 5px;
 }
 .cover-box>img{
     width: 100%;
 }
-.info-track{
-    max-width: 250px;
-    min-width: 80px;
+.border-circle{
+    border-radius: 50%;
 }
-
-
-
-
+.album-overlay{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);    
+    /* display: hidden; */
+    opacity: 0;
+    transition: .3s ease;
+}
+.cover-box:hover .album-overlay {
+    opacity: 1;
+}
+.album-overlay>a>i{
+    font-size: 50px;
+    color: white;
+}
 
 
 /* footer */
@@ -285,6 +306,9 @@ nav a {
     font-size: 25px;
     margin-left: 5px;
     margin-right: 5px;
+}
+a.play-over:hover{
+    font-weight: bolder;
 }
 .time{
     font-size: 8px;
