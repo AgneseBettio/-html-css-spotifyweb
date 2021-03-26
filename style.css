@@ -71,13 +71,14 @@ aside{
     flex-grow: 1;
     flex-shrink: 1;
     align-items: stretch;
-    }
+    overflow-y: auto;
+}
 @media all and (max-width: 767px){
     aside{
-        flex-basis: 80px;
+        flex-basis: 60px;
     }
     .content-screen{
-        flex-basis: calc( 100vw - 80px);
+        flex-basis: calc( 100vw - 60px);
     }
 }
 /* aside */
@@ -104,7 +105,7 @@ aside{
         display: none;
     }
     /* aside .account{
-        align-self: flex-end;
+        justify-self: end;
     } */
 }
 aside .t-playlists,
@@ -134,11 +135,13 @@ aside .b-playlists{
 aside ul li {
     margin-bottom: 10px;
 }
+.content-screen a,
 .b-nav a,
 aside a,
 footer a{
     color: #84858A;
 }
+.content-screen a:hover,
 .b-nav a:hover,
 aside a:hover,
 footer a:hover{
@@ -189,21 +192,38 @@ nav a {
 }
 
 /* central-wrap contentente 3 sezioni*/
+@media all and (max-width: 991px){
+    .chronology-box{
+        flex-wrap: wrap;
+    }
+    .cover-box{
+        width: 80px;
+    }
+
+}
 .chronology-box{
- 
+    overflow-x: hidden;
 }
+
 .album-suggestion{
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 15%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 1;
 }
+
 .cover-box{
-    width: 150px;
+    max-width: 200px;
     padding: 10px;
+    min-width: 80px;
 }
 .cover-box>img{
     width: 100%;
 }
+.info-track{
+    max-width: 250px;
+    min-width: 80px;
+}
+
 
 
 
