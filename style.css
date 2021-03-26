@@ -70,6 +70,7 @@ aside{
     flex-basis: calc( 100vw - 200px);
     flex-grow: 1;
     flex-shrink: 1;
+    align-items: stretch;
     }
 @media all and (max-width: 767px){
     aside{
@@ -187,9 +188,22 @@ nav a {
     margin-left: 5px;
 }
 
-/* central-wrap */
-
-
+/* central-wrap contentente 3 sezioni*/
+.chronology-box{
+ 
+}
+.album-suggestion{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 15%;
+}
+.cover-box{
+    width: 150px;
+    padding: 10px;
+}
+.cover-box>img{
+    width: 100%;
+}
 
 
 
