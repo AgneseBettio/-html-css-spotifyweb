@@ -199,7 +199,9 @@ nav a {
     .cover-box{
         width: 80px;
     }
-
+    .info-track{
+        width: 80px;
+    }
 }
 .chronology-box{
     overflow-x: hidden;
