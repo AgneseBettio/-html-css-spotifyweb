@@ -17,7 +17,7 @@
     text-align: center;
 }
 .clearfix::after{
-    float: left;
+    clear: both;
     content:"";
     display: table;
 }
@@ -102,10 +102,13 @@ aside{
     .xs-hidden{
         display: none;
     }
+    /* aside .account{
+        align-self: flex-end;
+    } */
 }
-.t-playlists,
-.aside-nav,
-.account{
+aside .t-playlists,
+aside .aside-nav,
+aside .account{
     flex-grow: 0;
     flex-basis: auto;
     flex-shrink: 0;
@@ -113,7 +116,7 @@ aside{
     padding-top: 15px;
     padding-bottom: 15px;
 }
-.b-playlists{
+aside .b-playlists{
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;
@@ -130,10 +133,12 @@ aside{
 aside ul li {
     margin-bottom: 10px;
 }
+.b-nav a,
 aside a,
 footer a{
     color: #84858A;
 }
+.b-nav a:hover,
 aside a:hover,
 footer a:hover{
     color: white;
@@ -159,7 +164,38 @@ footer a:hover{
     background-color:  #84858A;
     vertical-align: middle;
 }
+/* main nav */
+.b-nav{
+    padding: 10px 15px; 
+}
+.t-nav {
+    background-color: #080B12;
+    padding: 10px 15px;
+}
+.btn-upgrade{
+    border: 1px solid white;
+    padding: 10px 30px;
+    border-radius: 30px;
+    min-width: 150px;
+    text-align: center;
+}
+nav a {
+    font-size: 11px;
+}
+.b-nav ul li {
+    margin-right: 5px;
+    margin-left: 5px;
+}
 
+/* central-wrap */
+
+
+
+
+
+
+
+/* footer */
 .l-player,
 .r-player{
     order:1;
@@ -187,9 +223,9 @@ footer a:hover{
         width: 30px;
         height: 30px;
     }
-    /* .xs-player-icon{
+    .fav-icon-box{
         display: block;
-    } */
+    }
 }
 .album-box{
     width: 40px;
@@ -219,18 +255,21 @@ footer a:hover{
     margin-right: 5px;
     margin-left: 5px;
 }
+.seekbar-box{
+    width: 100%;
+    max-width: 400px;
+    align-items: center;
+}
 .seek-bar{
-    /* margin-right: 5px;
-    margin-left: 5px; */
     background-color: rgba(132, 133, 138, 0.5);
-    width: 75%;
+    flex-grow: 1;
     height: 4px;
     border-radius: 10px;
 }
 .bar-over{
     background-color: rgb(132, 133, 138);
-    flex-grow: 1;
     height: 4px;
+    width: 35%;
     border-radius: 10px;
     position: absolute;
     left:0;
@@ -260,18 +299,8 @@ footer a:hover{
     flex: 0 1 auto;
     margin-bottom: 5px;
 }
-.seekbar-box{
-    width: 100%;
-    max-width: 400px;
-    align-items: center;
-}
 .settings{
     top: 50%;
     transform: translateY(-50%);
 
-}
-.btn-upgrade{
-    border: 1px solid white;
-    padding: 10px 30px;
-    border-radius: 30px;
 }
