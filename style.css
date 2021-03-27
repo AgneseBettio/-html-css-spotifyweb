@@ -43,6 +43,9 @@
 .t-10px{
     padding-top: 10px;
 }
+.l-15px{
+    padding-left: 15px;
+}
 main a,
 main ul,
 footer a{
@@ -78,19 +81,22 @@ aside{
 }
 @media all and (max-width: 767px){
     aside{
-        flex-basis: 60px;
+        flex-basis: 55px;
     }
     .content-screen{
-        flex-basis: calc( 100vw - 60px);
+        flex-basis: calc( 100vw - 55px);
     }
 }
 /* aside */
-.logo-box{
+aside{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+aside .logo-box{
     flex-grow: 0;
-    flex-basis: 1;
+    flex-basis: auto;
     flex-shrink: 0;
     padding-top: 15px;
-    padding-left: 15px;
     padding-bottom: 15px;
 }
 .lg-logo{
@@ -102,14 +108,15 @@ aside{
 @media all and (max-width: 767px){
     .xs-logo{
         display: block;
-        height: 22px;  
+        height: 25px; 
+        width: 25px; 
     }
     .xs-hidden{
         display: none;
     }
-    /* aside .account{
-        justify-self: end;
-    } */
+    aside .aside-nav{
+        margin-top: -15px;
+    }
 }
 aside .t-playlists,
 aside .aside-nav,
@@ -117,9 +124,11 @@ aside .account{
     flex-grow: 0;
     flex-basis: auto;
     flex-shrink: 0;
-    padding-left: 15px;
     padding-top: 15px;
     padding-bottom: 15px;
+}
+aside .t-playlists{
+    margin-bottom: -15px;
 }
 aside .b-playlists{
     flex-grow: 1;
@@ -127,16 +136,16 @@ aside .b-playlists{
     flex-basis: auto;
     overflow: auto;
     padding-top: 15px;
-    padding-left: 15px;
     padding-bottom: 15px;
 }
 .nav-icon{
-    width: 22px;
+    width: 25px;
     vertical-align: top;
     margin-right: 10px;
 }
 aside ul li {
     margin-bottom: 10px;
+    line-height: 1.5;
 }
 .content-screen a,
 .b-nav a,
@@ -151,32 +160,75 @@ footer a:hover{
     color: white;
     text-decoration: none;
 }
-
+aside .squarebox{
+    width: 30px;
+    height: 30px;
+    background-color: #84858A;
+    margin-bottom: 15px;
+}
+.squarebox:hover{
+    background-color: white;
+}
+.fa-plus{
+    font-size: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+.crea-pl{
+    line-height: 30px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.download-icon-box{
+    width: 25px;
+    margin: auto;
+    margin-right: 10px;
+}
+a .download-icon-box:hover{
+    background-color: white;
+}
 .download-icon{
     width:15px;
     vertical-align: middle;
-    margin-right: 10px;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+span.hr{
+    width: 100%;
+    height: 1px;
+    margin-top: 1px solid #848484;
+    background-color: #848484;
 }
 .profile-box{
-    border-top: 1px solid #84858A;
     padding-top: 15px;
 }
 .profile-icon{
-    width: 20px;
+    width: 100%;
 }
 .bg-circle{
-    width: 22px;
-    height: 22px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     background-color:  #84858A;
     vertical-align: middle;
+    overflow: hidden;
+    margin-right: 10px;
+}
+span.v-line{
+    position: absolute;
+    height: 25px;
+    width: 2px;
+    background-color: #ADFF2F;
+    left: -2px;
 }
 /* main nav */
 .b-nav{
     padding: 10px 15px; 
 }
 .t-nav {
-    background-color: #080B12;
+    background-color: rgba(8, 11, 18, 0.5);
     padding: 10px 15px;
 }
 .btn-upgrade{
@@ -184,10 +236,10 @@ footer a:hover{
     padding: 10px 30px;
     border-radius: 30px;
     min-width: 150px;
-    text-align: center;
+    text-align: center;    
 }
 nav a {
-    font-size: 11px;
+    font-size: 12px;
 }
 .b-nav ul li {
     margin-right: 5px;
@@ -195,9 +247,12 @@ nav a {
 }
 span.under-line{
     height: 2px;
-    width: 20px;
+    width: 25px;
     border-bottom: 2px solid #ADFF2F;
     position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* central-wrap contentente 3 sezioni*/
