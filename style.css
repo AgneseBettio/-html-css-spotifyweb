@@ -52,6 +52,9 @@ body * {
 .l-15px{
     padding-left: 15px;
 }
+.mrg-l-10px{
+    margin-left: 10px;
+}
 main a,
 main ul,
 footer a{
@@ -85,12 +88,12 @@ aside{
     align-items: stretch;
     overflow-y: auto;
 }
-@media all and (max-width: 767px){
+@media all and (max-width: 575px){
     aside{
-        flex-basis: 55px;
+        flex-basis: 25px;
     }
     .content-screen{
-        flex-basis: calc( 100vw - 55px);
+        flex-basis: calc( 100vw - 25px);
     }
 }
 /* aside */
@@ -103,7 +106,7 @@ aside .logo-box{
     flex-basis: auto;
     flex-shrink: 0;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 .lg-logo{
     height: 35px;        
@@ -111,7 +114,7 @@ aside .logo-box{
 .xs-logo{
     display: none;
 }
-@media all and (max-width: 767px){
+@media all and (max-width: 575px){
     .xs-logo{
         display: block;
         height: 25px; 
@@ -122,6 +125,9 @@ aside .logo-box{
     }
     aside .aside-nav{
         margin-top: -15px;
+    }
+    aside .logo-box{
+        padding-top: 5px;
     }
 }
 aside .t-playlists,
@@ -144,10 +150,9 @@ aside .b-playlists{
     padding-top: 15px;
     padding-bottom: 15px;
 }
-.nav-icon{
+aside .nav-icon{
     width: 25px;
     vertical-align: top;
-    margin-right: 10px;
 }
 aside ul li {
     margin-bottom: 10px;
@@ -234,9 +239,9 @@ span.v-line{
     z-index: 2;
     height: 45px;
 }
-@media all and (max-width: 767px){
+@media all and (max-width: 575px){
     .t-nav{
-        width: calc(100% - 100px);
+        width: calc(100% - 80px);
     }
 }
 .t-nav .btn-upgrade{
