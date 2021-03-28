@@ -4,6 +4,9 @@
     margin:0;
     padding:0;
 }
+body * {
+    font-family: 'Barlow', sans-serif;;
+}
 .d-flex{
     display: flex;
 }
@@ -186,9 +189,6 @@ aside .squarebox{
     margin: auto;
     margin-right: 10px;
 }
-a .download-icon-box:hover{
-    background-color: white;
-}
 .download-icon{
     width:15px;
     vertical-align: middle;
@@ -221,7 +221,7 @@ span.v-line{
     height: 25px;
     width: 2px;
     background-color: #ADFF2F;
-    left: -2px;
+    left: -15px;
 }
 /* main nav */
 .b-nav{
@@ -231,13 +231,14 @@ span.v-line{
     background-color: rgba(8, 11, 18, 0.5);
     padding: 10px 15px;
 }
-.btn-upgrade{
+.t-nav .btn-upgrade{
     border: 1px solid white;
     padding: 10px 30px;
     border-radius: 30px;
     min-width: 150px;
     text-align: center;    
 }
+/* !!!! aggiungere Hover a btn */
 nav a {
     font-size: 12px;
 }
@@ -256,6 +257,9 @@ span.under-line{
 }
 
 /* central-wrap contentente 3 sezioni*/
+section{
+    padding: 10px 15px;
+}
 .section-box{
     overflow-x: hidden;
 }
@@ -268,7 +272,7 @@ span.under-line{
 .info-track{
     max-width: 200px;
     min-width: 120px;
-    padding: 10px;
+    padding: 10px 10px 10px 0;
 }
 .cover-box>img{
     width: 100%;
@@ -387,18 +391,40 @@ a.play-over:hover{
     align-items: center;
 }
 .seek-bar{
-    background-color: rgba(132, 133, 138, 0.5);
+    background-color: #84858a80;
     flex-grow: 1;
     height: 4px;
     border-radius: 10px;
 }
 .bar-over{
-    background-color: rgb(132, 133, 138);
+    background-color: #85868a;
     height: 4px;
     width: 35%;
     border-radius: 10px;
     position: absolute;
     left:0;
+}
+.bar-over-green{
+    background-color:#ADFF2F;
+    height: 4px;
+    width: 35%;
+    border-radius: 10px;
+    position: absolute;
+    left:0;
+    opacity: 0;
+}
+.seek-bar:hover .bar-over-green{
+    opacity: 1;
+}
+.circle-green{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #85868a;
+    position: inherit;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;   
 }
 .volume-bar{
     margin-right: 5px;
@@ -428,7 +454,6 @@ a.play-over:hover{
 .settings{
     top: 50%;
     transform: translateY(-50%);
-
 }
  
 
