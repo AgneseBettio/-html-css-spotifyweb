@@ -269,7 +269,7 @@ span.under-line{
     width: 25px;
     border-bottom: 2px solid #ADFF2F;
     position: absolute;
-    bottom: -5px;
+    bottom: -3px;
     left: 50%;
     transform: translateX(-50%);
 }
