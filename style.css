@@ -43,9 +43,6 @@ body * {
 .t-uppercase{
     text-transform: uppercase
 }
-.font-xs{
-    font-size: 11px;
-}
 .t-10px{
     padding-top: 10px;
 }
@@ -66,6 +63,7 @@ footer{
     height: 70px;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 }
 main{
     background-color: #141922;
@@ -247,9 +245,8 @@ span.v-line{
 }
 .t-nav .btn-upgrade{
     border: 1px solid white;
-    padding: 10px 30px;
+    padding: 0.75em 1.5em;
     border-radius: 30px;
-    width: 120px;
     text-align: center; 
     margin-right: 15px;  
 }
@@ -260,8 +257,8 @@ span.v-line{
     padding: 65px 15px 10px 15px;
 }
 /* !!!! aggiungere Hover a btn */
-nav a {
-    font-size: 12px;
+.content-screen nav{
+    font-size: 0.85rem;
 }
 .b-nav ul li {
     margin-right: 5px;
@@ -292,7 +289,7 @@ section{
 }
 .cover-box,
 .info-track{
-    max-width: 200px;
+    max-width: 250px;
     min-width: 120px;
     padding: 10px 10px 10px 0;
 }
@@ -332,13 +329,12 @@ section{
     top:50%;
     transform: translate(-50%, -50%);    
     opacity: 0;
-    transition: .3s ease;
 }
 .cover-box:hover .album-overlay {
     opacity: 1;
 }
 .album-overlay>a>i{
-    font-size: 50px;
+    font-size: 3.2rem;
     color: white;
 }
 
@@ -386,12 +382,14 @@ section{
     flex: 0 1 auto;
 }
 .l-player .album-box{
-    flex: 0 1 auto;
+    flex-grow: 0;
+    flex-shrink: 1;
     flex-basis: 35px;
     max-width: 35px;
 }
 .l-player .fav-icon-box{
     flex: 0 1 auto;
+    font-size: 0.75rem;
  }
 .album-box>img{
     width: 100%;
@@ -418,7 +416,7 @@ section{
     margin-top: 5px;
 }
 .player-icon{
-    font-size: 11px;
+    font-size: 0.75rem;
     margin-left: 10px;   
 }
 .fa-play-circle-o{
@@ -432,12 +430,10 @@ section{
 }
 .time-l{
     flex-grow: 0;
-    font-size: 8px;
     margin-right: 5px;
 }
 .time-r{
     flex-grow: 0;
-    font-size: 8px;
     margin-left: 5px;
 }
 .seek-bar{
@@ -485,7 +481,7 @@ section{
     flex: 0 1 auto;
 }
 .r-player .settings-icon{
-    font-size: 11px;
+    font-size: 0.75rem;
     margin-right: 5px;
 }
 .volume-bar-box{
@@ -516,13 +512,34 @@ section{
     }
 }
 
-/* mando push */
-
-
-.font12{
-    font-size: 12px;
+/* fontsize */
+html{
+    font-size: 18px;
 }
-.font8{
-    font-size: 8px;
+@media all and @media all and (max-width: 767px){
+    html{
+        font-size: 16px;
+    }
+}
+.font-xs{
+    font-size: 0.75rem;
+}
+.font-xxs{
+    font-size: 0.6rem;
 
 }
+aside .aside-nav,
+aside .b-playlists,
+aside .account{
+    font-size: 0.75rem;
+}
+main section h3{
+    font-size: 1.20rem;
+}
+main section h5{
+    font-size:0.85rem;
+}
+aside .t-playlists{
+    font-size: 1em;
+}
+
