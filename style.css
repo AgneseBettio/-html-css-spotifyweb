@@ -330,7 +330,6 @@ section{
     left:50%;
     top:50%;
     transform: translate(-50%, -50%);    
-    /* display: hidden; */
     opacity: 0;
     transition: .3s ease;
 }
@@ -365,24 +364,29 @@ section{
     flex-grow: 0;
     flex-basis: auto;
     padding: 10px 10px 10px 5px;
+    align-items: center;
 }
 @media all and (max-width: 767px){
-    .album-box{
-        min-width: 20px;
-        min-height: 20px;
-    }
     .sm-block{
         display: block;
         margin-bottom: 5px;
+    }
+}
+@media all and (max-width: 575px){
+    .xs-block{
+        display: block;
     }
 }
 /* LEFT PRT */
 .l-player{
     align-items: center;
 }
-.l-player .song-box,
+.l-player .song-box{
+    flex: 0 2 auto;
+}
 .l-player .album-box{
     flex: 0 2 auto;
+    flex-basis: 25px;
 }
 .l-player .album-box{
 max-width: 45px;
@@ -440,10 +444,11 @@ max-height: 45px;
     margin-left: 5px;
 }
 .seek-bar{
-    background-color: #84858a80;
     flex-grow: 1;
+    background-color: #84858a80;
     height: 3px;
     border-radius: 10px;  
+    width: 100%;
 }
 .bar-over{
     background-color: #85868a;
@@ -475,18 +480,21 @@ max-height: 45px;
     transform: translateY(-50%);
     right: 0;   
 }
-.volume-bar:hover .bar-over-green{
-    opacity: 1;
-}
 .settings{
-        top: 50%;
-        transform: translateY(-50%);
+    text-align: center;
+    justify-content: center;
+}
+.settings-box{
+    flex: 0 1 auto;
 }
 .r-player .settings-icon{
     font-size: 11px;
     margin-right: 5px;
 }
-.volume-bar{
+.volume-bar-box{
+    flex: 1 1 auto;
+}
+.volume-bar{ 
     min-width: 50px;
     background-color: rgba(132, 133, 138, 0.5);
     height: 3px;
@@ -494,16 +502,23 @@ max-height: 45px;
     vertical-align: middle;
     line-height: 16px;
 }
+.volume-bar:hover .bar-over-green{
+    opacity: 1;
+}
+
 @media all and (max-width: 575px){
     .r-player .settings-icon{
-        font-size: 11px;
+        font-size: 8px;
         margin-right: 2px;
     }
     .volume-bar{
         min-width: 20px;
     }
+    .circle-green{
+        width: 6px;
+        height: 6px;
+    }
 }
- 
 
 /* mando push */
 
