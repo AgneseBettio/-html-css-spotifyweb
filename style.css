@@ -65,7 +65,7 @@ footer{
     background-color: #282828;
     min-height: 70px;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
 }
 main{
     background-color: #141922;
@@ -382,15 +382,12 @@ section{
     align-items: center;
 }
 .l-player .song-box{
-    flex: 0 2 auto;
+    flex: 0 1 auto;
 }
 .l-player .album-box{
-    flex: 0 2 auto;
-    flex-basis: 25px;
-}
-.l-player .album-box{
-max-width: 45px;
-max-height: 45px;
+    flex: 0 1 auto;
+    flex-basis: 35px;
+    max-width: 35px;
 }
 .l-player .fav-icon-box{
     flex: 0 1 auto;
@@ -410,8 +407,7 @@ max-height: 45px;
 }
 .player-icon-box{
     flex: 0 1 auto;
-    margin-bottom: 5px;
-    justify-content: center;
+    justify-content:center;
 }
 .seekbar-box{
     flex: 0 1 auto;
@@ -505,7 +501,6 @@ max-height: 45px;
 .volume-bar:hover .bar-over-green{
     opacity: 1;
 }
-
 @media all and (max-width: 575px){
     .r-player .settings-icon{
         font-size: 8px;
