@@ -263,6 +263,7 @@ span.v-line{
 .b-nav ul li {
     margin-right: 5px;
     margin-left: 5px;
+    line-height: 2;
 }
 span.under-line{
     height: 2px;
