@@ -80,6 +80,7 @@ aside{
     background-color: black;
     flex-direction: column;
     align-items: stretch;
+    overflow: hidden;
 }
 .content-screen{
     flex-basis: calc( 100vw - 200px);
@@ -343,17 +344,16 @@ section{
 
 
 /* footer */
-.l-player,
-.r-player{
-    order:1;
+.l-player{
+    order: 1;
     flex-shrink:1;
     flex-grow: 0;
     flex-basis: auto;
-    padding: 10px 5px 10px 15px;
+    padding: 10px 5px 10px 10px;
 }
 .c-player{
     order: 2;
-    flex-shrink: 1;
+    flex-shrink: 0;
     flex-grow: 1;
     flex-basis: auto;
     padding-top: 10px;
@@ -361,64 +361,93 @@ section{
 }
 .r-player{
     order: 3;
+    flex-shrink:1;
+    flex-grow: 0;
+    flex-basis: auto;
+    padding: 10px 10px 10px 5px;
 }
 @media all and (max-width: 767px){
-    .l-player{
-        flex-shrink:1;
-    }
     .album-box{
-        width: 30px;
-        height: 30px;
+        min-width: 20px;
+        min-height: 20px;
     }
-    .fav-icon-box{
+    .sm-block{
         display: block;
+        margin-bottom: 5px;
     }
 }
-.album-box{
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
+/* LEFT PRT */
+.l-player{
+    align-items: center;
 }
+.l-player .song-box,
+.l-player .album-box{
+    flex: 0 2 auto;
+}
+.l-player .album-box{
+max-width: 45px;
+max-height: 45px;
+}
+.l-player .fav-icon-box{
+    flex: 0 1 auto;
+ }
 .album-box>img{
     width: 100%;
     object-fit: contain;
 }
-.song-box {
-    margin-right: 15px;
+.l-player .song-box{
+    line-height: 1;
 }
-.player-icon{
-    margin-right: 10px;
+/* CENTRAL PRT */
+.player{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.xs-player-icon{
-    margin-right: 5px;
-}
-.fa-play-circle-o{
-    font-size: 25px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-a.play-over:hover{
-    font-weight: bolder;
-}
-.time{
-    font-size: 8px;
-    margin-right: 5px;
-    margin-left: 5px;
+.player-icon-box{
+    flex: 0 1 auto;
+    margin-bottom: 5px;
+    justify-content: center;
 }
 .seekbar-box{
+    flex: 0 1 auto;
     width: 100%;
     max-width: 400px;
     align-items: center;
+    margin-top: 5px;
+}
+.player-icon{
+    font-size: 11px;
+    margin-left: 10px;   
+}
+.fa-play-circle-o{
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.fa-play-circle-o:hover{
+    font-size: 21px;
+}
+.time-l{
+    flex-grow: 0;
+    font-size: 8px;
+    margin-right: 5px;
+}
+.time-r{
+    flex-grow: 0;
+    font-size: 8px;
+    margin-left: 5px;
 }
 .seek-bar{
     background-color: #84858a80;
     flex-grow: 1;
-    height: 4px;
-    border-radius: 10px;
+    height: 3px;
+    border-radius: 10px;  
 }
 .bar-over{
     background-color: #85868a;
-    height: 4px;
+    height: 3px;
     width: 35%;
     border-radius: 10px;
     position: absolute;
@@ -426,7 +455,7 @@ a.play-over:hover{
 }
 .bar-over-green{
     background-color:#ADFF2F;
-    height: 4px;
+    height: 3px;
     width: 35%;
     border-radius: 10px;
     position: absolute;
@@ -446,38 +475,43 @@ a.play-over:hover{
     transform: translateY(-50%);
     right: 0;   
 }
-.volume-bar{
+.volume-bar:hover .bar-over-green{
+    opacity: 1;
+}
+.settings{
+        top: 50%;
+        transform: translateY(-50%);
+}
+.r-player .settings-icon{
+    font-size: 11px;
     margin-right: 5px;
-    margin-left: 5px;
+}
+.volume-bar{
+    min-width: 50px;
     background-color: rgba(132, 133, 138, 0.5);
-    width: 60px;
-    height: 4px;
+    height: 3px;
     border-radius: 10px;
     vertical-align: middle;
     line-height: 16px;
 }
-.volume-bar:hover .bar-over-green{
-    opacity: 1;
-}
-.on-song{
-    align-items: center;
-}
-.on-song>div{
-    flex: 0 1 auto;
- }
-.player{
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.player-icon-box{
-    flex: 0 1 auto;
-    margin-bottom: 5px;
-}
-.settings{
-    top: 50%;
-    transform: translateY(-50%);
+@media all and (max-width: 575px){
+    .r-player .settings-icon{
+        font-size: 11px;
+        margin-right: 2px;
+    }
+    .volume-bar{
+        min-width: 20px;
+    }
 }
  
 
 /* mando push */
+
+
+.font12{
+    font-size: 12px;
+}
+.font8{
+    font-size: 8px;
+
+}
