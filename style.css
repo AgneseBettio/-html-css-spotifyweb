@@ -63,7 +63,7 @@ footer a{
 /* layout */
 footer{
     background-color: #282828;
-    min-height: 70px;
+    height: 70px;
     justify-content: space-between;
     align-items: center;
 }
@@ -176,7 +176,7 @@ aside .squarebox{
     width: 30px;
     height: 30px;
     background-color: #84858A;
-    margin-bottom: 15px;
+    margin-top: 10px;
 }
 .squarebox:hover{
     background-color: white;
@@ -257,7 +257,7 @@ span.v-line{
     border: 2px solid white;
 }
 .b-nav{
-    padding: 65px 15px 10px 15px;;
+    padding: 65px 15px 10px 15px;
 }
 /* !!!! aggiungere Hover a btn */
 nav a {
@@ -272,7 +272,7 @@ span.under-line{
     width: 25px;
     border-bottom: 2px solid #ADFF2F;
     position: absolute;
-    bottom: -2px;
+    bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -288,6 +288,7 @@ section{
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: calc(100% / 6);
+    margin-top: 10px;
 }
 .cover-box,
 .info-track{
